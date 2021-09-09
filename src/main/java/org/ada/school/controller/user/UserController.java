@@ -43,7 +43,6 @@ public class UserController
 
 
     @PostMapping
-    @RolesAllowed("ADMIN")
     public ResponseEntity<User> create( @RequestBody UserDto userDto )
     {
         return ResponseEntity.ok( userService.create( userDto ) );
@@ -56,6 +55,7 @@ public class UserController
     }
 
     @DeleteMapping( "/{id}" )
+    @RolesAllowed("ADMIN")
     public ResponseEntity<Boolean> delete( @PathVariable String id )
     {
         return ResponseEntity.ok( userService.deleteById( id ) );
