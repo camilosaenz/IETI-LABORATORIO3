@@ -654,7 +654,7 @@ Luego se verifica que se pueda verificar la solicitud get del User, pero antes s
 
 Y se verifica de la creación en MongoDB
 
-<img src="">
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/MongoDB.png?raw=true">
 
 <img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/getUser2.png?raw=true">
 
