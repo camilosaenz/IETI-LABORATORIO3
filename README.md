@@ -108,7 +108,16 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
 3. Start your server and verify that the configuration works as expected:
 
    * Open Endpoint: [Health Controller](http://localhost:8080/v1/health)
+
+Se verifica el EndPoint de Health
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/getHealth1.png?raw=true">
+
    * Secured Endpoint: [Users' List](http://localhost:8080/v1/user)
+
+Se verifica el EndPoint de getUser
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/getUser.png?raw=true">
 
 ### Part 2: Implementing the Authentication Controller
 
@@ -632,6 +641,30 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
       ```properties
          Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTMwZmMzMWYwNTk2YzE0YzRiOWY5NTMiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzA2MDAzMjAsImV4cCI6MTYzMDY4NjcyMH0.s29NZMHYDCsCXqj9W9ZajNnlwyzW4qJG832Z3PXhwhk
       ```
+      
+Ahora se realiza la prueba
+
+Primero en Postman se realiza la solicitud GET del Health
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/getHealth2.png?raw=true">
+
+Luego se verifica que se pueda verificar la solicitud get del User, pero antes se tiene el usuario creado en la base de datos de MongoDB por medio de una solicitud POSTen Postman
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/create.png?raw=true">
+
+Y se verifica de la creación en MongoDB
+
+<img src="">
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/getUser2.png?raw=true">
+
+Se realiza el EndPoint de AUTH del post para validar usuario y obtener el Token del Usuario
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/postAuth.png?raw=true">
+
+Y finalmente se verifica.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO3/blob/codelab-implementation/images/getUserWithToken.png?raw=true">
 
 ### Challenge Yourself: Implement a mechanism to support Application tokens
 
